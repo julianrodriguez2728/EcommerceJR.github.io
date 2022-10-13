@@ -1,21 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Item = ()=>{
+const Item = ( {prod })=>{
 
     return(
-        <article className="card">
-            <img src="./colores/color_1" alt="..."/>
+    <div className="contenedor-cartas">
+                <Link className="link-cartas" to={`/item/${prod.id}`}>
+
+        <article className="card" style={{ width: "18rem" }}>
+            <img src={prod.img} alt={prod.title} />
         <div className="card-body">
-            <div class="card" style="width: 18rem;">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
+            <div className="card" style={{ width: "15rem" }}>
+            <ul className="list-group list-group-flush">
+                <li className="list-group-item" id="titulo-cartas">{prod.title}</li>
+                <li className="list-group-item">{prod.price}</li>
+                <li className="list-group-item">{prod.categoria}</li>
             </ul>
         </div>
             </div>
         </article>
+                </Link>
+    </div>
     )
 }
 
-export default Item;
+    export default Item;
