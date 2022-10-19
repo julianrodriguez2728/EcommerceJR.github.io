@@ -155,7 +155,7 @@ p{
  display: grid;
   gap: 6rem;
   grid-auto-rows: 22rem;
-  grid-template-columns: repeat(auto-fill, minmax(30rem ,2fr)); 
+  grid-template-columns: repeat(auto-fill, minmax(25rem ,2fr)); 
 
 
 }
@@ -235,4 +235,16 @@ h4{
 .add-btn-1{
   font-family: 'Fredoka One', cursive;
   color: white;
+}
+.formulario{
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-btn-2{
+  background-color: rgb(88, 72, 88);
+  border: none;
+  width: 89px;
+  border-radius: 5px;
 }

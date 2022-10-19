@@ -34,7 +34,7 @@ export const products = [
         img:"https://i.pinimg.com/736x/a4/f4/aa/a4f4aafa46dc8a008712292a6719af40--colour-swatches-plum-purple.jpg"
     },
     {
-        id: 5,
+        id: 6,
         title: "biColors",
         price: 2500,
         categoria: "Apagados",

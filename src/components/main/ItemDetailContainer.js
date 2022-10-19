@@ -26,8 +26,6 @@ const ItemDetailContainer = ()=>{
         });
     }, [])
 
-    console.log(item);
-
     return(
         <div>
             <ItemDetail  item={item}/>
