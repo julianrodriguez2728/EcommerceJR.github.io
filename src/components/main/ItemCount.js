@@ -1,7 +1,4 @@
 import React, {useState} from "react";
-import { Link } from "react-router-dom";
-
-
 const ItemCount = (props) =>{
 
     const [count, setCount] = useState(props.initial)
@@ -21,7 +18,7 @@ const ItemCount = (props) =>{
                 <p>{count}</p>
                 <button onClick={restar} className="boton" >-</button>
             </div>
-            <button className="add-btn-2">Agregar al carrito</button >
+            <button className="add-btn-2" onClick={() => onAdd(count)}>Agregar al carrito</button >
         </div>
     )
 }
