@@ -248,3 +248,10 @@ h4{
   width: 89px;
   border-radius: 5px;
 }
+.contenedor-carrito{
+  display: flex;
+  align-items: center;
+}
+.borrar{
+  width: 150px;
+}
