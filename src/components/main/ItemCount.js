@@ -1,15 +1,15 @@
 import React, {useState} from "react";
-const ItemCount = (props) =>{
+const ItemCount = ({onAdd, stock, initial}) =>{
 
-    const [count, setCount] = useState(props.initial)
+    const [count, setCount] = useState(initial)
     
 
     const sumar = () =>{
-        count < props.stock && setCount(count + 1)
+        count < stock && setCount(count + 1)
 
     }
     const restar = () =>{
-        count > props.initial && setCount(count - 1)
+        count > initial && setCount(count - 1)
     }
     return(
         <div className="container-count">
