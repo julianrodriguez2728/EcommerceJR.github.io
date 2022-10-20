@@ -14,7 +14,8 @@ const ItemDetail = ({ item }) =>{
          addToCart(item, numero);
         }
         const onAdd= (unidades) => {
-        setUnidades(unidades)}
+        setUnidades(unidades)
+        addToCart(item, unidades);}
 
     return(
         <>

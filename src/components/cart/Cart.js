@@ -8,8 +8,9 @@ const Cart = ()=>{
         <div>
             {
                 cart.map ((prod)=>{
-                    <div>
-                        key={prod.id}
+                    return(
+                           <div 
+                           key={prod.id}>
                         <img src={prod.img} alt={prod.title} />
                         <div className="contenedor-carrito">
                             <h2>{prod.title}</h2>
@@ -18,6 +19,7 @@ const Cart = ()=>{
                             <h3>subtotal: ${prod.price*prod.cantidad}</h3>
                         </div>
                     </div>
+                       ) 
                 })
             }
         </div>
