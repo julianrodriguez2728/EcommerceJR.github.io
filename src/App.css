@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 html{
-  background-color: crimson;
+  background-color: rgb(61, 63, 78);
 }
 body{
   font-family: 'Poppins', sans-serif;
@@ -34,6 +34,7 @@ body{
 }
 main{
   background-color: rgb(61, 63, 78);
+  height: 100vh;
 }
 .App-link {
   color: #61dafb;
@@ -183,8 +184,8 @@ p{
 }
 .detail-container{
   width: 530px;
-  height: 650px;
-  margin: 0 auto;
+  height: 700px;
+  margin: 20px auto;
   border-radius: 10px;
   background-color: #9a8ba4;
   display: flex;
@@ -248,10 +249,26 @@ h4{
   width: 89px;
   border-radius: 5px;
 }
-.contenedor-carrito{
+.contenedor-carrito2{
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenedor-carrito1{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contenedor-carrito1 img{
+  height: 200px;
 }
 .borrar{
   width: 150px;
+}
+.cartas-fondo{
+  height: 50vh;
+}
+.contenedor-compra2{
+  height: 100vh;
 }

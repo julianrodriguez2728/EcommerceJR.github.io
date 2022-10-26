@@ -1,7 +1,7 @@
 export const products = [
     {   id:1,
         title: "Vintage Rodde",
-        price: 2240,
+        price: 3040,
         categoria: "Vivos",
         img:"https://i.pinimg.com/originals/ca/ba/93/caba93da48034ed0efd5759aa2e7fe09.png"
     },

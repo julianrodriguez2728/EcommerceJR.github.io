@@ -16,9 +16,21 @@ const Provider = ({children})=>{
 
     const isInCart = (id)=> cart.some((prod) => prod.id ===id)
     const deleteAll = ()=> setCart([]);
+    const deleteOne = (id) =>{
+        const prodFiltrado = cart.filter((prod)=> prod.id !== id)
+        setCart(prodFiltrado);
+    }
+    const totalUnidades = ()=>{
+        let acc = 0
+        const copia = [...cart]
+        copia.forEach((prod) =>{
+            acc = acc + prod.cantidad
+        })
+        return acc
+    }
 console.log(cart)
     return(
-         <CartContext.Provider value={{ cart, addToCart, deleteAll }}>
+         <CartContext.Provider value={{ cart, totalUnidades ,addToCart, deleteAll , deleteOne}}>
             {children}
         </CartContext.Provider>
     )

@@ -1,39 +1,44 @@
 import React, { useEffect, useState} from "react";
 import ItemList from "./ItemList";
-import { products } from "../productos/productos";
 import { useParams } from "react-router-dom";
+import {collection, getDocs, query, where} from "firebase/firestore";
+import { DB } from "../../documents/firebases";
 
 const ItemListContainer = () =>{
     const [items, setItems]= useState([])
+    const [loading, setLoading] = useState (true)
 
     
     const {categoryName} = useParams();
     useEffect(()=>{
-        const traerProductos = () =>{
-
-            return new Promise((res,rej)=>{
-                const prodFiltrado = products.filter(
-                    (prod)=> prod.categoria === categoryName
-                )
-                const prod = categoryName ? prodFiltrado : products;
-                setTimeout(()=>{
-                    res(prod);
-                }, 500)
-            })
-        };
-        traerProductos()
+        const collectionProd = collection(DB, "productos");
+        const q = query(collectionProd, where("categoria", "==", categoryName))
+        getDocs(q)
         .then((res)=>{
-            setItems(res);
+            const productos = res.docs.map((prod)=>{
+                return{
+                    id: prod.id,
+                    ...prod.data(),
+
+                }
+            })
+            setItems(productos)
         })
         .catch(()=>{
-            console.log();
+
         })
+        .finally(()=>{
+            setLoading(false);
+        })
+        return()=> setLoading (true);
     }, [categoryName])
 
+    if(loading){
+        return <h2>Cargando.....</h2>
+    }
 
     return (
         <main>
-
         <div className="item-list-container">
             <ItemList  items= {items}/>
         </div>

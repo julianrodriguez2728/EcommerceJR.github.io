@@ -1,33 +1,29 @@
 import React, { useEffect, useState} from "react";
 import ItemDetail from "./ItemDetail";
-import { products } from "../productos/productos";
 import { useParams } from "react-router-dom";
-
+import { DB } from "../../documents/firebases";
+import { collection , doc, getDoc } from "firebase/firestore";
 const ItemDetailContainer = ()=>{
     const [item, setItem] = useState({});
     const {id}=useParams();
 
     useEffect(() =>{
-        const traerProductos = ()=>{
-            return new Promise ((res, rej)=>{
-                const producto = products.find((prod) => prod.id===Number(id));
-                
-                setTimeout(()=>{
-                    res(producto);
-                }, 2000);
-            })
-        };
-        traerProductos()
-        .then((res) =>{
-            setItem(res);
+       const collectionProd = collection(DB , "productos")
+       const ref = doc(collectionProd, id);
+
+
+
+       getDoc(ref)
+            .then((res)=>{
+                setItem({
+                    id: res.id,
+                    ...res.data(),
         })
-        .catch((error)=>{
-            console.log(error);
-        });
-    }, [])
+       })
+    }, [id])
 
     return(
-        <div>
+        <div className="contenedor-compra2">
             <ItemDetail  item={item}/>
         </div>
     )

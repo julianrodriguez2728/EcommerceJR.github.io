@@ -18,7 +18,6 @@ const ItemDetail = ({ item }) =>{
         addToCart(item, unidades);}
 
     return(
-        <>
         <div className="detail-container">
             <article className="card-detail">
 
@@ -27,7 +26,7 @@ const ItemDetail = ({ item }) =>{
                 <h2 className="subtitulo">{item.title}</h2>
                 <h3 className="precios">${item.price}</h3>
                 <h4 className="categorias">{item.categoria}</h4>
-
+                <h2> {unidades === 0 ? `hay ${unidades} unidades` : `Producto Cargado!`}</h2>
 
                 { unidades === 0  ? (
 
@@ -41,7 +40,7 @@ const ItemDetail = ({ item }) =>{
             </div>
             </article>
         </div>
-        </>
+
     )
 }
 
