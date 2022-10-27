@@ -28,7 +28,9 @@ const Provider = ({children})=>{
         })
         return acc
     }
-console.log(cart)
+    const total = ()=>{
+        return 1000
+    }
     return(
          <CartContext.Provider value={{ cart, totalUnidades ,addToCart, deleteAll , deleteOne}}>
             {children}

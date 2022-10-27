@@ -36,7 +36,7 @@ function NavBar(){
         </Link>
         <ul className="nav">
             {categories.map((cat)=>{
-                <NavLink key={cat.id} to={`/category/${cat.path}`}>{cat.name}</NavLink>
+               return <NavLink key={cat.id} to={`/category/${cat.path}`}>{cat.name}</NavLink>
             })}
             <NavLink to="/cart">
         <CartWidget />

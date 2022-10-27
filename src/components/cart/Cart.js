@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext"
 
 const Cart = ()=>{
@@ -24,8 +25,11 @@ const Cart = ()=>{
                             <h3>cantidad: {prod.cantidad}</h3>
                             <h3>subtotal: ${prod.price*prod.cantidad}</h3>
                         </div>
+                        <div className="contenedor-borrar">
+
                         <button onClick={()=> deleteOne(prod.id)} className="borrar">Borrar Producto</button>
-                        <button onClick={deleteAll} className="borrar">Borrar todo</button>
+                            <Link to ="/checkout"className="borrar">checkout</Link>
+                        </div>
                     </div>
                            </section>
                        ) 

@@ -1,13 +1,31 @@
-import { useState } from "react";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { useContext, useState } from "react";
+import { CartContext } from "../../context/CartContext";
+import { DB } from "../../documents/firebases";
 
 const Form =()=>{
     const [name,  setName] = useState("");
     const [LastName, setLastName] = useState("");
-
+    const {cart, total} = useContext(CartContext);
+    const totalPrice = total();
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        console.log( {name, LastName})
+        const order = {
+            buyer: {name, LastName},
+            items: cart,
+            total: totalPrice,
+            date: serverTimestamp(),
+
+        };
+        const orderCollection = collection(DB, "orders")
+        addDoc(orderCollection, order)
+        .then((res)=>{
+            console.log(res)
+        })
+        .catch(()=>{
+            console.log()
+        })
     }
 
     const handleChangeName = (e)=>{

@@ -272,3 +272,9 @@ h4{
 .contenedor-compra2{
   height: 100vh;
 }
+.contenedor-borrar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
