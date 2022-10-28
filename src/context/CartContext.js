@@ -10,7 +10,7 @@ const Provider = ({children})=>{
             alert("ya está en el carro")
         } else {
             
-                setCart([...cart, producto]);
+                setCart([...cart, producto  ]);
         }
     }
 
@@ -32,7 +32,7 @@ const Provider = ({children})=>{
         return 1000
     }
     return(
-         <CartContext.Provider value={{ cart, totalUnidades ,addToCart, deleteAll , deleteOne}}>
+         <CartContext.Provider value={{ cart, totalUnidades ,addToCart, deleteAll , deleteOne, total}}>
             {children}
         </CartContext.Provider>
     )

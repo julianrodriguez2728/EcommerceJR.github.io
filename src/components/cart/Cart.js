@@ -12,11 +12,9 @@ const Cart = ()=>{
         <div className="contenedor-compra">
             {
                 cart.map ((prod)=>{
-                    return(
-                        <section className="cartas-fondo">
-
+                    return ( 
+                            <section key={prod.id} className="cartas-fondo"> 
                            <div 
-                           key={prod.id} 
                            className="contenedor-carrito1">
                         <img src={prod.img} alt={prod.title} />
                         <div className="contenedor-carrito2">
