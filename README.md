@@ -1,4 +1,6 @@
-# Ecommerce "CoMMic" Julian Ignacio Rodriguez
+# Ecommerce "MIMIK U" Julian Ignacio Rodriguez
+
+//para imagen ![ ]
 
 Link del Repositorio [Click acá](https://github.com/julianrodriguez2728/preEntrega3-julianrodriguez).
 

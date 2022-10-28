@@ -10,7 +10,7 @@ export const products = [
         title: "Acqua Bones",
         price: 2240,
         categoria: "Apagados",
-        img:"https://i.pinimg.com/originals/9b/bb/36/9bbb3681cea005f27153debd60cf7746.png"
+        img:"https://i.pinimg.com/originals/24/54/33/245433b019c9f527e0cc8cadf7b491f5.png"
     },
     {
         id: 3,

@@ -34,7 +34,7 @@ const ItemDetail = ({ item }) =>{
                     
             ) : (
                 
-                <Link to="/cart/">IR AL CARRITO</Link>
+                <Link className="carrito-ir" to="/cart/">°IR AL CARRITO°</Link>
 
                 )}
             </div>

@@ -49,7 +49,8 @@ main{
   }
 }
 .contenedor-header{
-  background-color: rgb(224, 222, 210);
+  padding: 15px;
+  background-color: rgb(245, 232, 205);
   display: flex;
   flex-direction: space-between;
   justify-content: space-around;
@@ -66,9 +67,22 @@ main{
 .nav a{
   margin: 20px;
   text-decoration: none;
-  color: black;
-}
+  font-size: 22px;
+  color: rgb(8, 112, 107);
+  
+  font-weight:normal;
 
+    padding-left: 5px;
+    padding-right: 7px;
+    text-decoration: none;
+    transition: all 0.3s ease; 
+    border-radius: 3px;
+}
+.nav a:hover{
+  color: white;
+    box-shadow: 10px 10px ;
+    background-color: rgb(10, 10, 10);
+}
 .nav li{
   list-style: none;
 }
@@ -95,27 +109,7 @@ align-items: center;
 article img{
   height: 120px;
 }
-li{
-  font-size: 22px;
-  color: rgb(255, 249, 249);
-  font-weight:normal;
-  text-decoration: none;
-}
-a{
-  color: grey;
-}
-li a{
-    padding-left: 5px;
-    padding-right: 7px;
-    text-decoration: none;
-    transition: all 0.3s ease; 
-    border-radius: 3px;
-}
-li a:hover{
-  box-shadow: 10px 10px ;
-  color: white;
-  background-color: rgb(54, 44, 55);
-}
+
 .container-count{
   display: flex;
   align-items: center;
@@ -238,7 +232,7 @@ h4{
   color: white;
 }
 .formulario{
-  min-height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,6 +250,7 @@ h4{
   justify-content: center;
 }
 .contenedor-carrito1{
+  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -267,6 +262,7 @@ h4{
   width: 150px;
 }
 .cartas-fondo{
+  background-color: white;
   height: 50vh;
 }
 .contenedor-compra2{
@@ -280,4 +276,67 @@ h4{
 }
 .enviar{
   width: 200px;
+}
+#root{
+  background-color: #4f4f4f;
+}
+.form{
+  display: flex;
+}
+.contenedor-inputs{
+  margin: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.contenedor-total-input{
+  border-radius: 5px;
+  background-color: rgb(59, 52, 52);
+  height: 680px;
+  width: 600px;
+}
+.enviar{
+  color: rgb(255, 255, 255);
+  background-color: rgb(155, 181, 172);
+  width: 180px;
+  height: 55px;
+  border-style: none;
+  border-radius: 2px;
+}
+.boton-enviar{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+input{
+  height: 50px;
+}
+.nombre{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+.apellido{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+.telefono{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+.email{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+.carrito-ir{
+  text-decoration: none;
+  color: #e7e7e7;
+  font-family: 'Bebas Neue', italy;
+  font-size: 30px;
+
+}
+.carrito-ir:hover{
+  transition: all 0.3s ease; 
+
+  color: rgb(164, 105, 105);
 }
