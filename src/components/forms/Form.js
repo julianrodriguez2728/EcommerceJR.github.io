@@ -53,9 +53,8 @@ const Form =()=>{
     if(orderId){
         return(
             <div className="contenedor-compra-order">
-
-            <h1>Compra Exitosa</h1>
-            <h2>Su orden de compra es {orderId}</h2>
+            <h1>!Compra Exitosa!</h1>
+            <h2>Su orden de compra es [  <strong>{orderId}</strong>  ]</h2>
         </div>
         )
 

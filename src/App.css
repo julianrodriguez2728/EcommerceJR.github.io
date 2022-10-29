@@ -393,3 +393,11 @@ transition: all 0.1s ease;
   display: flex;
   justify-content: flex-end;
 }
+.contenedor-compra-order{
+  background-color: rgb(223, 229, 231);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
