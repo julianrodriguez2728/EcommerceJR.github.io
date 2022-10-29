@@ -34,7 +34,6 @@ body{
 }
 main{
   background-color: rgb(61, 63, 78);
-  height: 100vh;
 }
 .App-link {
   color: #61dafb;
@@ -79,9 +78,9 @@ main{
     border-radius: 3px;
 }
 .nav a:hover{
-  color: white;
+  color: rgb(247, 246, 252);
     box-shadow: 10px 10px ;
-    background-color: rgb(10, 10, 10);
+    background-color: rgb(69, 137, 127);
 }
 .nav li{
   list-style: none;
@@ -147,18 +146,21 @@ p{
 }
 
 .item-list{
+  height: auto;
  display: grid;
   gap: 6rem;
-  grid-auto-rows: 22rem;
   grid-template-columns: repeat(auto-fill, minmax(25rem ,2fr)); 
 
 
+}
+.item-back{
+  height: 10vh;
 }
 .link-cartas{
   text-decoration: none;
 }
 .contenedor-cartas{
-  width: 20px;
+  width: 0px;
   margin: 20px;
 
 }
@@ -265,6 +267,10 @@ h4{
   background-color: white;
   height: 50vh;
 }
+.contenedor-compra{
+  background-color: white;
+  height: auto;
+}
 .contenedor-compra2{
   height: 100vh;
 }
@@ -339,4 +345,51 @@ input{
   transition: all 0.3s ease; 
 
   color: rgb(164, 105, 105);
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right,  #511f73, #26A699, #a5872d, #965e19, #8a2c23);
+  height: 100px;
+  width: auto;
+}
+.footer-font{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 70px;
+  color: white;
+}
+.basurero{
+  color: #26A699;
+  max-height: 50px;
+max-width: 300px;
+transition: all 0.1s ease; 
+
+}
+.basurero:hover{
+max-width: 300px;
+max-height: 70px;
+}
+.checkout{
+  padding: 10px;
+  color: white;
+  border: 1px solid rgb(127, 84, 84);
+  border-radius: 4px;
+  font-size: 50px;
+  text-decoration: none;
+  box-shadow: #281d28;
+  background-color: red;
+transition: all 0.1s ease; 
+  
+}
+.checkout:hover{
+  color: beige;
+  font-size: 55px;
+
+}
+.checkout-container{
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
 }

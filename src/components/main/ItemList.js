@@ -10,6 +10,9 @@ const ItemList = ( {items})=>{
                     return <Item prod={prod} key={prod.id}/>
                 })
                 }
+                <div className="item-back">
+
+                </div>
         </div>
     )
 }

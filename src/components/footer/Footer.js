@@ -1,15 +1,10 @@
+const Footer = ()=>{
 
-function Footer(){
     return(
-        <>
-        <footer>
-            <div className="footerbckg">
-
-        <h3>Comisión 34775 </h3>
-            </div>
-        </footer>
-        </>
+        <div className="footer">
+            <h2 className="footer-font">MIMIK U</h2>
+        </div>
     )
 }
 
-export default Footer;
+export default Footer

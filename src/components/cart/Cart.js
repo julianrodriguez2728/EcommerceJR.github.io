@@ -25,14 +25,18 @@ const Cart = ()=>{
                         </div>
                         <div className="contenedor-borrar">
 
-                        <button onClick={()=> deleteOne(prod.id)} className="borrar">Borrar Producto</button>
-                            <Link to ="/checkout"className="borrar">checkout</Link>
+                        <Link onClick={()=> deleteOne(prod.id)} className="borrar">
+                            <img src={"../img/basurero.png"}  alt="basurero" className="basurero"/>
+                        </Link>
                         </div>
                     </div>
                            </section>
                        ) 
-                })
-            }
+                    })
+                }
+                <div className="checkout-container">
+<Link to ="/checkout"className="checkout">Finalizar Compra</Link>
+                </div>
         </div>
     )
 }

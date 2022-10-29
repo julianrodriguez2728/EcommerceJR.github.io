@@ -68,22 +68,22 @@ const Form =()=>{
                 <div className="contenedor-inputs">
                 <h3>Nombre:
                 </h3>
-                <input className="nombre" type="text" name="nombre" placeholder="Nombre....." onChange={handleChangeName}/>
+                <input className="nombre" type="text" name="nombre" placeholder="Nombre....." onChange={handleChangeName} required/>
                 </div>
                 <div className="contenedor-inputs">
                 <h3>Apellido:
                 </h3>
-                <input className="apellido" type="text" name="apellido" placeholder="Apellido...." onChange={handleChangeLastName}/>
+                <input className="apellido" type="text" name="apellido" placeholder="Apellido...." onChange={handleChangeLastName} required/>
                 </div>
                 <div className="contenedor-inputs">
                 <h3>Celular:
                 </h3>
-                <input className="telefono" type="tel" name="telefono" placeholder="Telefono...." onChange={handlechangeTelefono}/>
+                <input className="telefono" type="tel" name="telefono" placeholder="Telefono...." onChange={handlechangeTelefono} required/>
                 </div>
                 <div className="contenedor-inputs">
                 <h3>Email:
                 </h3>
-                <input  className="email" type="email" name="email" placeholder="Email....." onChange={handlechangeEmail}/>
+                <input  className="email" type="email" name="email" placeholder="Email....." onChange={handlechangeEmail} required/>
                 </div>
                 <div className="boton-enviar">
 

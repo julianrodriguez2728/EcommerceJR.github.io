@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter , Routes, Route}  from "react-router-dom";
 import Form from './components/forms/Form';
 import Provider from './context/CartContext';
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
         <Route path='/checkout' element={<Form/>}/>
         <Route path='/cart' element={<Cart />}/>
       </Routes>
-
      </BrowserRouter>
+      <Footer />
     </Provider>
     </>
   );
