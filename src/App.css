@@ -401,3 +401,12 @@ transition: all 0.1s ease;
   align-items: center;
   flex-direction: column;
 }
+.contenedor-vacio{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vacio{
+  color: white;
+}

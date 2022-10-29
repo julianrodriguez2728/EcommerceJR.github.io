@@ -4,9 +4,16 @@ import { CartContext } from "../../context/CartContext"
 
 const Cart = ()=>{
     const {cart,  deleteAll, deleteOne}= useContext(CartContext);
-    if(cart.lenght === 0){
-        return <h1>No hay productos</h1>
+    if (cart.length === 0) {
+
+        return(
+            <div className="contenedor-vacio">
+            <h1 className="vacio">Carrito vacio...... *cof* *cof*</h1>
+            </div>
+            
+            ) 
     }
+
 
     return(
         <div className="contenedor-compra">
